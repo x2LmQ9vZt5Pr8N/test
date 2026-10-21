@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Flutter SDK
         uses: subosito/flutter-action@v2
@@ -32,8 +32,8 @@ jobs:
           zip -r HelloApp-iPhone15.ipa Payload
 
       - name: Upload IPA Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: HelloApp-iPhone15-IPA
           path: HelloApp-iPhone15.ipa
-          retrieval-days: 7
+          retention-days: 7
